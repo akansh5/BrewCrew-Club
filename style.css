@@ -1,51 +1,165 @@
+@font-face {
+  font-family: "Geist-SemiBold";
+  src: url("attachments/geist-font-1.5.0/fonts/Geist/otf/Geist-SemiBold.otf");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
-    color: black;
-    background-color: white;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.navbar {
-    height: 80px;
-    width: 100%;
-    background-color: lightblue;
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
+html,
+body {
+  height: 100%;
+  font-family: "Geist-SemiBold", sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+nav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #000;
+  padding: 15px 0;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 .logo-img {
-    height: 60px;
-    width: auto;
-    border-right: 2px solid grey;
-    padding-right: 10px;
+  width: 5rem;
+  height: 5rem;
+  margin-right: 1rem;
 }
 
-.logo-text {
-    font-size: 28px;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    color: black;
-    padding-left: 10px;
+.nav-links a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
 }
 
-
-h2 {
-    text-align: center;
-    font-size: 35px;
-    font-weight: bolder;
-    margin-top: 40px;
+.nav-links a:hover {
+  color: #f00;
 }
 
-p {
-    text-align: center;
-    font-size: 22px;
-    margin-top: 10px;
+header {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+header p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+header button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: #ff0000;
+}
+
+.main-content {
+  padding: 40px 20px;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.section p,
+.section ul {
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #444;
+}
+
+.section ul {
+  padding-left: 20px;
+}
+
+.section ul li {
+  margin-bottom: 8px;
+}
+
+.footer {
+  background-color: #222;
+  color: #ddd;
+  padding: 40px 20px 20px;
+  margin-top: auto;
+}
+
+.footer-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li,
+.footer-section a {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+  color: #ff0000;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #fff;
+  font-size: 0.9rem;
+  color: #aaa;
 }
