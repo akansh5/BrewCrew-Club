@@ -1,0 +1,29 @@
+# Ignore VS Code settings
+.vscode/
+
+# Ignore local history folder
+.history/
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.swp
+*.bak
+*~
+
+# Ignore node_modules if using npm
+node_modules/
+
+# Ignore environment variables
+.env
+.env.*
+
+# Ignore build output folders (optional)
+dist/
+build/
