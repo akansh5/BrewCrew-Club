@@ -1,7 +1,7 @@
-# welcome to bugbase
+# welcome to BugBase
 
 ## Description
-This is a simple README file for the folder **bugbase**
+This is a simple README file for the folder **BugBase**
 
 BugBase is a community-driven platform 
 where developers share and discover already-solved bugs
