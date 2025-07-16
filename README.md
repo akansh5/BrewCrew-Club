@@ -9,7 +9,7 @@ where developers share and discover already-solved bugs
 
 ps: still working on it :)
 
-can visit site:
+site is live at
 https://akansh5.github.io/bugbase/
 
 
