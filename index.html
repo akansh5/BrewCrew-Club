@@ -3,123 +3,399 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BugBase</title>
+    <title>BrewCrew Club - India's First Coffee-Only Community</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <meta
       name="description"
-      content="BugBase helps developers solve bugs smarter and faster."
+      content="BrewCrew Club is India’s first coffee-only community app — discover cafés, connect with coffee lovers, and unlock exclusive brews."
     />
     <meta
       name="keywords"
-      content="BugBase, debugging, bug fixing, developer tools"
+      content="BrewCrew, coffee, cafés, coffee lovers, coffee app India, BrewCrew Club"
     />
     <meta name="author" content="Akansh Rawat" />
+    <meta
+      property="og:title"
+      content="BrewCrew Club - India's First Coffee-Only Community"
+    />
+    <meta
+      property="og:description"
+      content="Discover cafés, connect with coffee lovers, and unlock exclusive brews with India's first coffee-only club."
+    />
+    <meta
+      property="og:image"
+      content="https://your-website.com/social-preview.jpg"
+    />
+    <meta property="og:url" content="https://your-website.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .footer {
+        position: relative; 
+        overflow: hidden; 
+      }
+      .footer-animation-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+      .footer-wrapper,
+      .footer-bottom {
+        position: relative;
+        z-index: 1; 
+      }
+      .floating-icon {
+        position: absolute;
+        display: block;
+        animation: float 25s infinite alternate ease-in-out;
+      }
+      @keyframes float {
+        from {
+          transform: translateY(0) rotate(0deg);
+          opacity: 0.7;
+        }
+        to {
+          transform: translateY(-20px) rotate(360deg);
+          opacity: 0;
+        }
+      }
+    </style>
   </head>
   <body>
-    <nav>
+    <nav class="navbar">
       <div class="container nav-wrapper">
-        <a href="#" class="logo">
-          <img src="images/BugBase-image.png" alt="BugBase Logo" class="logo-img" />
-          <span class="logo-text">BugBase</span>
-        </a>
-        <div class="nav-links">
-          <a href="#">Home</a>
-          <a href="#">Search</a>
-          <a href="#">Features</a>
-          <a href="#">Support</a>
-          <a href="#">Login</a>
-        </div>
+        <a href="index.html" class="logo"
+          ><span class="logo-text">BrewCrew Club</span></a
+        >
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/discover.html">Cafés</a></li>
+          <li><a href="pages/blog.html">Blog</a></li>
+          <li><a href="pages/aboutus.html">About Us</a></li>
+          <li>
+            <a href="pages/join.html" class="nav-join-button">Join Us</a>
+          </li>
+        </ul>
       </div>
     </nav>
-    <header>
-      <div class="container">
-        <h1>Fix Bugs Faster with BugBase</h1>
+    <header id="hero" class="section">
+      <div class="container hero-content">
+        <h1>India’s First Coffee-Only Club</h1>
         <p>
-          Your one-stop hub to learn from solved bugs and help more people with
-          your debugging skills.
+          Discover cafés, connect with coffee lovers, and unlock exclusive
+          brews. Because life’s too short for bad coffee.
         </p>
-        <button>Get Started</button>
+        <a href="pages/join.html" class="cta-button">Join the Club</a>
+      </div>
+      <div class="hero-waves">
+        <svg
+          class="waves"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28"
+          preserveAspectRatio="none"
+          shape-rendering="auto"
+        >
+          <defs>
+            <path
+              id="gentle-wave"
+              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            />
+          </defs>
+          <g class="parallax">
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="0"
+              fill="rgba(74,44,15,0.7)"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="3"
+              fill="rgba(74,44,15,0.5)"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="5"
+              fill="rgba(74,44,15,0.3)"
+            />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#4a2c0f" />
+          </g>
+        </svg>
       </div>
     </header>
-
+    <div class="logo-marquee">
+      <div class="marquee-track">
+        <span>Starbucks</span> • <span>Blue Tokai Coffee</span> •
+        <span>Third Wave Coffee</span> • <span>Dunkin'</span> •
+        <span>Subko Coffee</span> • <span>Sleepy Owl</span> •
+        <span>Café Coffee Day</span> • <span>Starbucks</span> •
+        <span>Blue Tokai Coffee</span> • <span>Third Wave Coffee</span> •
+        <span>Dunkin'</span> • <span>Subko Coffee</span> •
+        <span>Sleepy Owl</span> • <span>Café Coffee Day</span> •
+      </div>
+    </div>
     <main class="main-content container">
-      <section class="section">
-        <h2>About BugBase</h2>
+      <section
+        id="about"
+        class="section fade-in"
+        aria-labelledby="about-heading"
+      >
+        <h2 id="about-heading">About BrewCrew Club</h2>
+        <div class="content-wrapper">
+          <p>
+            At BrewCrew Club, we believe coffee is more than a drink — it’s a
+            vibe, a culture, and a community. From hidden indie cafés to your
+            daily cappuccino fix, we’re building India’s first coffee-first
+            platform where you can explore cafés, meet coffee lovers, and sip
+            smarter.
+          </p>
+          <blockquote class="brand-story">
+            <p>
+              <strong
+                >Born out of countless café-hopping sessions, BrewCrew Club is a
+                community-driven platform designed for and by coffee lovers. Our
+                vision is to build India's largest, most passionate coffee-first
+                community.</strong
+              >
+            </p>
+          </blockquote>
+        </div>
+      </section>
+      <section
+        id="features"
+        class="section fade-in"
+        aria-labelledby="features-heading"
+      >
+        <h2 id="features-heading">Features & Benefits</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3>For Users</h3>
+            <ul>
+              <li>
+                <strong>📍 Café Discovery:</strong> Find hidden gems and read
+                honest reviews.
+              </li>
+              <li>
+                <strong>👥 Community:</strong> Share your stories and connect
+                with enthusiasts.
+              </li>
+              <li>
+                <strong>🎟️ Rewards:</strong> Earn points and redeem them for
+                free drinks.
+              </li>
+              <li>
+                <strong>💳 Coffee Pass:</strong> Upcoming subscription for daily
+                discounts.
+              </li>
+            </ul>
+          </div>
+          <div class="feature-card">
+            <h3>For Cafés & Brands</h3>
+            <ul>
+              <li>
+                <strong>📊 Dashboard:</strong> Gain valuable insights into
+                customer visits and loyalty.
+              </li>
+              <li>
+                <strong>🎯 Targeted Audience:</strong> Connect directly with
+                dedicated coffee lovers.
+              </li>
+              <li>
+                <strong>🎟️ Increase Footfall:</strong> Drive more customers with
+                exclusive perks.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section
+        id="how-it-works"
+        class="section fade-in"
+        aria-labelledby="how-it-works-heading"
+      >
+        <h2 id="how-it-works-heading">How It Works</h2>
+        <div class="how-it-works-flow">
+          <div class="flow-card">
+            <h3>For Users</h3>
+            <ol>
+              <li>
+                <strong>Sign Up:</strong> Download the app or create your
+                account.
+              </li>
+              <li>
+                <strong>Discover & Share:</strong> Find new cafés and post about
+                your favorite brews.
+              </li>
+              <li>
+                <strong>Earn Rewards:</strong> Get points for your activities.
+              </li>
+              <li>
+                <strong>Redeem Perks:</strong> Use points for free drinks and
+                exclusive merch.
+              </li>
+            </ol>
+          </div>
+          <div class="flow-card">
+            <h3>For Cafés</h3>
+            <ol>
+              <li>
+                <strong>Partner Up:</strong> Reach out to us to get started.
+              </li>
+              <li>
+                <strong>List Your Café:</strong> Add your location and the perks
+                you want to offer.
+              </li>
+              <li>
+                <strong>Access Insights:</strong> Use your dashboard to track
+                customer engagement.
+              </li>
+              <li>
+                <strong>Build Loyalty:</strong> Watch your community and
+                business grow.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section
+        id="community"
+        class="section fade-in"
+        aria-labelledby="community-heading"
+      >
+        <h2 id="community-heading">Join the Community</h2>
         <p>
-          BugBase is a wonderfull app built to help its users and our client
-          work together and solve bugs for one another in a digital environment.
+          Share your latte art, explore hidden cafés, and enjoy exclusive perks.
+          Coffee tastes better when brewed together.
         </p>
+        <a href="pages/blog.html" class="cta-button">Share Your Coffee Story</a>
       </section>
-
-      <section class="section">
-        <h2>will add image/video here soon</h2>
-        <p>.</p>
-      </section>
-
-      <section class="section">
-        <h2>Why Choose BugBase</h2>
-        <ul>
-          <li>Community-driven content</li>
-          <li>Real-world bug fixes</li>
-          <li>Searchable error database</li>
-          <li>Developer-first approach</li>
-        </ul>
-      </section>
-
-      <section class="section">
-        <h2>How It Works</h2>
-        <p>.</p>
-      </section>
-
-      <section class="section">
-        <h2>Join the Community</h2>
+      <section
+        id="partner"
+        class="section fade-in"
+        aria-labelledby="partner-heading"
+      >
+        <h2 id="partner-heading">Partner with BrewCrew</h2>
         <p>
-          Encourage developers to sign up, contribute, or follow our social
-          channels.
+          Ready to grow your coffee community? We give you direct access to a
+          loyal, coffee-first audience. Increase your visibility, build customer
+          loyalty, and get insights with our simple dashboard.
         </p>
+        <a href="#contact" class="cta-button">List Your Café → Partner Now</a>
+      </section>
+      <section
+        id="contact"
+        class="section fade-in"
+        aria-labelledby="contact-heading"
+      >
+        <h2 id="contact-heading">Message Us</h2>
+        <p>
+          Got a question? Want to partner with us? Or just want to say hi? We're
+          all ears.
+        </p>
+        <div class="contact-form-wrapper">
+          <form
+            id="contact-form"
+            class="contact-form"
+            action="https://formspree.io/f/xanbzonn"
+            method="POST"
+          >
+            <div class="form-group">
+              <label for="name">Your Name</label
+              ><input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+                autocomplete="name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label
+              ><input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+                autocomplete="email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label
+              ><textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="What's on your mind?"
+                required
+              ></textarea>
+            </div>
+            <button class="cta-button" type="submit">Send Message</button>
+            <p id="form-status"></p>
+          </form>
+        </div>
       </section>
     </main>
-
     <footer class="footer">
+      <div class="footer-animation-container"></div>
       <div class="container footer-wrapper">
         <div class="footer-section">
-          <h3>BugBase</h3>
-          <p>Helping developers with bugs :)</p>
+          <h3>BrewCrew Club</h3>
+          <p>India's coffee-first community.</p>
         </div>
-
         <div class="footer-section">
           <h4>Explore</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Donate</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About BrewCrew Club</a></li>
+            <li><a href="#features-heading">Features</a></li>
+            <li><a href="#how-it-works-heading">How It Works</a></li>
+            <li><a href="pages/blog.html">Join </a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#contact-heading">Message Us</a></li>
           </ul>
         </div>
-
         <div class="footer-section">
           <h4>Resources</h4>
           <ul>
-            <li><a href="#">#1</a></li>
-            <li><a href="#">#2</a></li>
-            <li><a href="#">#3</a></li>
-            <li><a href="#">#4</a></li>
+            <li><a href="pages/blog.html">Brewing Guides</a></li>
+            <li><a href="pages/rewards.html">Rewards</a></li>
+            <li><a href="pages/faq.html">FAQ</a></li>
+            <li><a href="License.txt">License</a></li>
           </ul>
         </div>
-
         <div class="footer-section">
           <h4>Contact</h4>
-          <p>Email: akanshrawat.in@gmail.com</p>
-          <p>
-            Twitter: <a href="https://x.com/_akanshrawat"> _akanshrawat </a>
-          </p>
-          <p>GitHub: <a href="https://github.com/akansh5"> akansh5 </a></p>
+          <address>
+            <p>
+              <a href="mailto:brewcrewclub.in@gmail.com"
+                >brewcrewclub.in@gmail.com</a
+              >
+            </p>
+          </address>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 BugBase. Built with care by Akansh Rawat.</p>
+        <p>
+          &copy; <span id="current-year">2025</span> BrewCrew Club. Crafted with
+          love & caffeine by Akansh Rawat. All rights reserved.
+        </p>
       </div>
     </footer>
     <script src="script.js"></script>
+    <script src="footer-animation.js"></script>
   </body>
 </html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join the Club - BrewCrew Club</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+      :root {
+        --primary-color: #1a1a1a;
+        --secondary-color: #f5f5f5;
+        --accent-color: #b8860b;
+        --light-text-color: #e0e0e0;
+        --dark-text-color: #333333;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        font-family: "Inter", sans-serif;
+        background-color: var(--secondary-color);
+        color: var(--dark-text-color);
+        display: flex;
+        flex-direction: column;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      nav {
+        background-color: var(--primary-color);
+        padding: 1.5rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo-link {
+        text-decoration: none;
+        color: var(--light-text-color);
+        font-weight: 700;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-link:hover {
+        color: var(--accent-color);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-links a {
+        margin-left: 1.5rem;
+        text-decoration: none;
+        color: var(--light-text-color);
+        font-weight: 600;
+        position: relative;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        right: 0;
+        background-color: var(--accent-color);
+        transition: width 0.3s ease-out;
+      }
+
+      .nav-links a:hover::after,
+      .nav-links a.active::after {
+        width: 100%;
+        left: 0;
+      }
+
+      main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      .form-container {
+        background-color: #fff;
+        border-radius: 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        padding: 4rem;
+        max-width: 600px;
+        width: 100%;
+        margin: 2rem auto;
+      }
+
+      .form-container h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      .form-container p {
+        font-size: 1.1rem;
+        color: #6d4c41;
+        margin-bottom: 2rem;
+      }
+
+      .signup-form .form-group {
+        margin-bottom: 1.5rem;
+        text-align: left;
+      }
+
+      .signup-form label {
+        display: block;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+      }
+
+      .signup-form input {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        background-color: #f9f9f9;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .signup-form input:focus {
+        outline: none;
+        border-color: var(--accent-color);
+        box-shadow: 0 0 5px rgba(184, 134, 11, 0.3);
+      }
+
+      .cta-button {
+        background-color: var(--primary-color);
+        color: var(--light-text-color);
+        padding: 1.25rem 2.5rem;
+        border: none;
+        border-radius: 2.5rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 1rem;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .cta-button:hover {
+        background-color: var(--accent-color);
+        transform: translateY(-2px);
+      }
+
+      .privacy-text {
+        font-size: 0.9rem;
+        color: #666;
+        margin-top: 1.5rem;
+      }
+
+      .footer {
+        background-color: var(--primary-color);
+        color: var(--light-text-color);
+        padding: 6rem 2rem 3rem;
+      }
+
+      .footer-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 3rem;
+      }
+
+      .footer-section h3,
+      .footer-section h4 {
+        margin-bottom: 1.5rem;
+        color: #fff;
+        font-weight: 700;
+      }
+
+      .footer-section p,
+      .footer-section ul,
+      .footer-section li,
+      .footer-section a {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: var(--light-text-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-section a:hover {
+        color: var(--accent-color);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 3rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.6);
+        margin-top: 3rem;
+      }
+
+      @media (max-width: 768px) {
+        .nav-wrapper {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .nav-links {
+          margin-top: 1rem;
+        }
+
+        .nav-links a {
+          margin: 0 0.5rem;
+        }
+
+        .form-container {
+          padding: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container nav-wrapper">
+        <a href="../index.html" class="logo"
+          ><span class="logo-text">BrewCrew Club</span></a
+        >
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="discover.html" class="active">Cafés</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="join.html" class="join-button">Join Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <div class="form-container">
+          <h1>Join the BrewCrew</h1>
+          <p>
+            Discover cafés, earn rewards, and share your coffee story with
+            India's first coffee-only community.
+          </p>
+          <form class="signup-form">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Create a password"
+                required
+              />
+            </div>
+            <button type="submit" class="cta-button">Sign Up</button>
+          </form>
+          <p class="privacy-text">
+            By signing up, you agree to our privacy policy. We'll never spam you
+            or sell your data.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-animation-container"></div>
+      <div class="container footer-wrapper">
+        <div class="footer-section">
+          <h3>BrewCrew Club</h3>
+          <p>India's coffee-first community.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About BrewCrew Club</a></li>
+            <li><a href="#features-heading">Features</a></li>
+            <li><a href="#how-it-works-heading">How It Works</a></li>
+            <li><a href="pages/blog.html">Join </a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#contact-heading">Message Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="pages/blog.html">Brewing Guides</a></li>
+            <li><a href="pages/rewards.html">Rewards</a></li>
+            <li><a href="pages/faq.html">FAQ</a></li>
+            <li><a href="License.txt">License</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <address>
+            <p>
+              <a href="mailto:brewcrewclub.in@gmail.com"
+                >brewcrewclub.in@gmail.com</a
+              >
+            </p>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="current-year">2025</span> BrewCrew Club. Crafted with
+          love & caffeine by Akansh Rawat. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
