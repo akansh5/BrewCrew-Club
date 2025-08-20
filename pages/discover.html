@@ -8,6 +8,10 @@
       name="description"
       content="Discover and explore the best partner cafés in the BrewCrew Club community."
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -392,7 +396,20 @@
       </header>
 
       <section class="discovery-content">
-        <div class="map-container">[Interactive Map Placeholder]</div>
+        <div class="map-container">
+          [Interactive Map Placeholder]
+          <iframe
+            width="600"
+            height="450"
+            style="border: 0"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed/v1/place?key=API_KEY
+    &q=Space+Needle,Seattle+WA"
+          >
+          </iframe>
+        </div>
 
         <div class="search-filter-bar">
           <input
@@ -457,7 +474,9 @@
             <li><a href="../index.html">Home</a></li>
             <li><a href="../index.html#about">About BrewCrew Club</a></li>
             <li><a href="../index.html#features-heading">Features</a></li>
-            <li><a href="../index.html#how-it-works-heading">How It Works</a></li>
+            <li>
+              <a href="../index.html#how-it-works-heading">How It Works</a>
+            </li>
             <li><a href="../index.html#community">Community</a></li>
             <li><a href="../index.html#contact-heading">Message Us</a></li>
           </ul>
@@ -475,9 +494,14 @@
           <h4>Contact</h4>
           <address>
             <p>
+              <i class="fa-solid fa-envelope"></i>
               <a href="mailto:brewcrewclub.in@gmail.com"
                 >brewcrewclub.in@gmail.com</a
               >
+            </p>
+            <p>
+              <i class="fa-brands fa-instagram"></i>
+              <a href="https://www.instagram.com/visitbcc/">visitbcc</a>
             </p>
           </address>
         </div>
